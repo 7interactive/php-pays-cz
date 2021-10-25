@@ -8,10 +8,8 @@
             "7interactive\\PaysGate\\": "src/"
         }
     },
-    "config": {
-        "platform": {
-            "php": "7.3.2"
-        }
-    },
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.3.2"
+    }
 }
