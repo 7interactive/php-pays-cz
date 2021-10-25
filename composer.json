@@ -1,0 +1,17 @@
+{
+    "name": "7interactive/pays-gate",
+    "description": "Helper class for processing of Pays payments.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "7interactive\\PaysGate\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.3.2"
+        }
+    },
+    "require": {}
+}
