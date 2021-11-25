@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-use SevenInteractive\PaysGate\HashesNotEqualException;
-use SevenInteractive\PaysGate\InvalidCurrencyProvided;
-use SevenInteractive\PaysGate\InvalidLangProvided;
+namespace SevenInteractive\PaysGate;
 
 class PaysClient
 {
