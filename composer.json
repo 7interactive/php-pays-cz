@@ -5,11 +5,14 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "7interactive\\PaysGate\\": "src/"
-        }
+            "SevenInteractive\\PaysGate\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
     },
     "minimum-stability": "dev",
     "require": {
-        "php": ">=7.3.2"
+        "php": ">=7.0"
     }
 }

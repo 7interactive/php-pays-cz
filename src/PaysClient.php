@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace SevenInteractive\PaysGate;
+use SevenInteractive\PaysGate\HashesNotEqualException;
+use SevenInteractive\PaysGate\InvalidCurrencyProvided;
+use SevenInteractive\PaysGate\InvalidLangProvided;
 
 class PaysClient
 {
@@ -14,28 +16,28 @@ class PaysClient
     /** @var string */
     private $paysApiPassword;
 
-    private const URL = "https://www.pays.cz/paymentorder";
-    private const PARAMETER_MERCHANT = 'Merchant';
-    private const PARAMETER_SHOP = 'Shop';
-    private const PARAMETER_AMOUNT = 'Amount';
-    private const PARAMETER_CURRENCY = 'Currency';
-    private const PARAMETER_MERCHANT_ORDER_NUMBER = 'MerchantOrderNumber';
-    private const PARAMETER_CLIENT_EMAIL = 'Email';
-    private const PARAMETER_CLIENT_LANG = 'Lang';
-    private const PARAMETER_RETURN_URL = 'ReturnURL';
+    const URL = "https://www.pays.cz/paymentorder";
+    const PARAMETER_MERCHANT = 'Merchant';
+    const PARAMETER_SHOP = 'Shop';
+    const PARAMETER_AMOUNT = 'Amount';
+    const PARAMETER_CURRENCY = 'Currency';
+    const PARAMETER_MERCHANT_ORDER_NUMBER = 'MerchantOrderNumber';
+    const PARAMETER_CLIENT_EMAIL = 'Email';
+    const PARAMETER_CLIENT_LANG = 'Lang';
+    const PARAMETER_RETURN_URL = 'ReturnURL';
 
-    private const PARAMETER_PAYMENT_ORDER_ID = 'PaymentOrderID';
-    private const PARAMETER_PAYMENT_ORDER_STATUS_ID = 'PaymentOrderStatus';
-    private const PARAMETER_STATUS_ID = 'Status';
-    private const PARAMETER_CURRENCY_ID = 'CurrencyID';
-    private const PARAMETER_CURRENCY_BASE_UNITS = 'CurrencyBaseUnits';
-    private const PARAMETER_PAYMENT_ORDER_STATUS_DESCRIPTION = 'PaymentOrderStatusDescription';
-    private const PARAMETER_PAYMENT_HASH = 'hash';
+    const PARAMETER_PAYMENT_ORDER_ID = 'PaymentOrderID';
+    const PARAMETER_PAYMENT_ORDER_STATUS_ID = 'PaymentOrderStatus';
+    const PARAMETER_STATUS_ID = 'Status';
+    const PARAMETER_CURRENCY_ID = 'CurrencyID';
+    const PARAMETER_CURRENCY_BASE_UNITS = 'CurrencyBaseUnits';
+    const PARAMETER_PAYMENT_ORDER_STATUS_DESCRIPTION = 'PaymentOrderStatusDescription';
+    const PARAMETER_PAYMENT_HASH = 'hash';
 
     public const CURRENCY_CZK = 'CZK';
     public const CURRENCY_EUR = 'EUR';
     public const CURRENCY_USD = 'USD';
-    private const ALLOWED_CURRENCIES = [
+    const ALLOWED_CURRENCIES = [
         self::CURRENCY_CZK,
         self::CURRENCY_EUR,
         self::CURRENCY_USD,
@@ -46,7 +48,7 @@ class PaysClient
     public const LANG_EN_US = 'EN-US';
     public const LANG_RU_RU = 'RU-RU';
     public const LANG_JA_JP = 'JA-JP';
-    private const ALLOWED_LANGS = [
+    const ALLOWED_LANGS = [
         self::LANG_CS_CZ,
         self::LANG_SK_SK,
         self::LANG_EN_US,
@@ -54,9 +56,9 @@ class PaysClient
         self::LANG_JA_JP,
     ];
 
-    private const PAYMENT_ORDER_STATUS_RECEIVED = 1;
-    private const PAYMENT_ORDER_STATUS_FAILED = 2;
-    private const PAYMENT_ORDER_STATUS_SUCCESS = 3;
+    const PAYMENT_ORDER_STATUS_RECEIVED = 1;
+    const PAYMENT_ORDER_STATUS_FAILED = 2;
+    const PAYMENT_ORDER_STATUS_SUCCESS = 3;
 
     public const PAYMENT_STATUS_NOT_PROCESSED = 'NOT_PROCESSED';
     public const PAYMENT_STATUS_FAILED = 'FAILED';
