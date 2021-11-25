@@ -34,20 +34,20 @@ class PaysClient
     const PARAMETER_PAYMENT_ORDER_STATUS_DESCRIPTION = 'PaymentOrderStatusDescription';
     const PARAMETER_PAYMENT_HASH = 'hash';
 
-    public const CURRENCY_CZK = 'CZK';
-    public const CURRENCY_EUR = 'EUR';
-    public const CURRENCY_USD = 'USD';
+   const CURRENCY_CZK = 'CZK';
+   const CURRENCY_EUR = 'EUR';
+   const CURRENCY_USD = 'USD';
     const ALLOWED_CURRENCIES = [
         self::CURRENCY_CZK,
         self::CURRENCY_EUR,
         self::CURRENCY_USD,
     ];
 
-    public const LANG_CS_CZ = 'CS-CZ';
-    public const LANG_SK_SK = 'SK-SK';
-    public const LANG_EN_US = 'EN-US';
-    public const LANG_RU_RU = 'RU-RU';
-    public const LANG_JA_JP = 'JA-JP';
+   const LANG_CS_CZ = 'CS-CZ';
+   const LANG_SK_SK = 'SK-SK';
+   const LANG_EN_US = 'EN-US';
+   const LANG_RU_RU = 'RU-RU';
+   const LANG_JA_JP = 'JA-JP';
     const ALLOWED_LANGS = [
         self::LANG_CS_CZ,
         self::LANG_SK_SK,
@@ -60,9 +60,9 @@ class PaysClient
     const PAYMENT_ORDER_STATUS_FAILED = 2;
     const PAYMENT_ORDER_STATUS_SUCCESS = 3;
 
-    public const PAYMENT_STATUS_NOT_PROCESSED = 'NOT_PROCESSED';
-    public const PAYMENT_STATUS_FAILED = 'FAILED';
-    public const PAYMENT_STATUS_SUCCESS = 'SUCCESS';
+   const PAYMENT_STATUS_NOT_PROCESSED = 'NOT_PROCESSED';
+   const PAYMENT_STATUS_FAILED = 'FAILED';
+   const PAYMENT_STATUS_SUCCESS = 'SUCCESS';
 
     /**
      * PaysClient public constructor.
