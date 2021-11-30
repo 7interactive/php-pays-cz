@@ -25,7 +25,7 @@ class PaysClient
     const PARAMETER_RETURN_URL = 'ReturnURL';
 
     const PARAMETER_PAYMENT_ORDER_ID = 'PaymentOrderID';
-    const PARAMETER_PAYMENT_ORDER_STATUS_ID = 'PaymentOrderStatus';
+    const PARAMETER_PAYMENT_ORDER_STATUS_ID = 'PaymentOrderStatusID';
     const PARAMETER_STATUS_ID = 'Status';
     const PARAMETER_CURRENCY_ID = 'CurrencyID';
     const PARAMETER_CURRENCY_BASE_UNITS = 'CurrencyBaseUnits';
