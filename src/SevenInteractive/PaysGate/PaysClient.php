@@ -146,7 +146,7 @@ class PaysClient
             throw new HashesNotEqualException();
         }
 
-        if ($paymentOrderStatusId === self::PAYMENT_ORDER_STATUS_SUCCESS) {
+        if ((int) $paymentOrderStatusId === self::PAYMENT_ORDER_STATUS_SUCCESS) {
             return self::PAYMENT_STATUS_SUCCESS;
         } else {
             return self::PAYMENT_STATUS_FAILED;
